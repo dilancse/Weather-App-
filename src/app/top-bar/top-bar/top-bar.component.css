@@ -1,0 +1,10 @@
+.header-wrap{
+  width:100%;
+  background: coral;
+  margin: 0 auto;
+}
+.title{
+  margin: 0 auto;
+  width: 200px;
+  text-align: left;
+}
