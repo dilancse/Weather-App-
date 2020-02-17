@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherItem } from 'src/app/Models/weather-item';
 import { WEATHER_ITEMS } from 'src/app/Data/weather.data';
+import { WeatherServiceService } from 'src/app/Services/weather-service.service';
 
 @Component({
   selector: 'app-weather-list',
@@ -11,10 +12,10 @@ export class WeatherListComponent implements OnInit {
 
   weatherItems: WeatherItem[];
 
-  constructor() { }
+  constructor(private weatherService: WeatherServiceService) { }
 
   ngOnInit() {
-    this.weatherItems = WEATHER_ITEMS;
+    this.weatherItems = this.weatherService.getWeatherItems();
   }
 
 }
