@@ -1,4 +1,4 @@
-export class WeatherItem{
+export class WeatherItem {
   cityName: string;
   info: string;
   temperature: number;
