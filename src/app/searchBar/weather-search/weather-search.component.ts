@@ -18,10 +18,10 @@ export class WeatherSearchComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    //console.log(this.inputText.value);
+    // console.log(this.inputText.value);
     this.weatherServic.searchWeatherData(this.inputText.value)
-    .subscribe(value =>{
-      const weatherItem = {cityName:value.name, info:value.weather[0].description,temperature: value.main.temp };
+    .subscribe(value => {
+      const weatherItem = {cityName: value.name, info: value.weather[0].description, temperature: value.main.temp };
       this.weatherServic.addWeatherItem(weatherItem);
     });
 

@@ -17,13 +17,13 @@ export class WeatherServiceService {
     return WEATHER_ITEMS;
   }
 
-  addWeatherItem(weatherItem: WeatherItem){
+  addWeatherItem(weatherItem: WeatherItem) {
     WEATHER_ITEMS.push(weatherItem);
   }
 
-  searchWeatherData(cityname: string) : Observable<any> {
+  searchWeatherData(cityname: string): Observable<any> {
 
     return this.http.get('http://api.openweathermap.org/data/2.5/weather?&units=metric&q=' + cityname + '&appid=' + this.apiKey);
-    //return of(WEATHER_ITEMS);
+    // return of(WEATHER_ITEMS);
   }
 }
