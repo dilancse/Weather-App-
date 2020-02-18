@@ -7,7 +7,8 @@ import { TopBarComponent } from './top-bar/top-bar/top-bar.component';
 import { WeatherItemComponent } from './WeatherItem/weather-item/weather-item.component';
 import { WeatherListComponent } from './WeatherList/weather-list/weather-list.component';
 import { WeatherSearchComponent } from './searchBar/weather-search/weather-search.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

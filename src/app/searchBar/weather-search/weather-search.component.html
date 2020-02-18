@@ -1,7 +1,7 @@
 <section>
   <form #weForm="ngForm" (ngSubmit)="onSubmit(weForm)">
     <label for="city">City</label>
-    <input ngControl="location" type="text" id="city" required>
+    <input [formControl]="inputText" type="text" id="city" required >
     <button type="submit">Add City</button>
   </form>
   <div>
