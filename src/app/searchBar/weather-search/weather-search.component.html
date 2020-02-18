@@ -1,0 +1,10 @@
+<section>
+  <form #weForm="ngForm" (ngSubmit)="onSubmit(weForm)">
+    <label for="city">City</label>
+    <input ngControl="location" type="text" id="city" required>
+    <button type="submit">Add City</button>
+  </form>
+  <div>
+    <span>City found:</span> City Name
+  </div>
+</section>
